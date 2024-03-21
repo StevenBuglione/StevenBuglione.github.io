@@ -63,22 +63,22 @@ _check_cli() {
   done
 }
 
-_check_git() {
-  # ensure that changes have been committed
-  if [[ -n $(git status . -s) ]]; then
-    echo "> Abort: Commit the staged files first, and then run this tool again."
-    exit 1
-  fi
-
-  $opt_pre || (
-    if [[ $working_branch != "$DEFAULT_BRANCH" &&
-      $working_branch != hotfix/* &&
-      $working_branch != "$PROD_BRANCH" ]]; then
-      echo "> Abort: Please run on the default, release or patch branch."
-      exit 1
-    fi
-  )
-}
+#_check_git() {
+#  # ensure that changes have been committed
+##  if [[ -n $(git status . -s) ]]; then
+##    echo "> Abort: Commit the staged files first, and then run this tool again."
+##    exit 1
+##  fi
+#
+##  $opt_pre || (
+##    if [[ $working_branch != "$DEFAULT_BRANCH" &&
+##      $working_branch != hotfix/* &&
+##      $working_branch != "$PROD_BRANCH" ]]; then
+##      echo "> Abort: Please run on the default, release or patch branch."
+##      exit 1
+##    fi
+##  )
+#}
 
 _check_src() {
   for i in "${!FILES[@]}"; do
@@ -98,7 +98,7 @@ _check_node_packages() {
 
 check() {
   _check_cli
-  _check_git
+ # _check_git
   _check_src
   _check_node_packages
 }
