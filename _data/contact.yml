@@ -3,12 +3,13 @@
 - type: github
   icon: "fab fa-github"
 
-- type: twitter
-  icon: "fa-brands fa-x-twitter"
+- type: linkedin
+  icon: 'fab fa-linkedin'   # icons powered by <https://fontawesome.com/>
+  url:  'https://www.linkedin.com/in/stevenbuglione/'                  # Fill with your Linkedin homepage
 
-- type: email
-  icon: "fas fa-envelope"
-  noblank: true # open link in current tab
+- type: stack-overflow
+  icon: 'fab fa-stack-overflow'
+  url:  'https://stackoverflow.com/users/10619545/steve-buglione'                  # Fill with your stackoverflow homepage
 
 - type: rss
   icon: "fas fa-rss"
