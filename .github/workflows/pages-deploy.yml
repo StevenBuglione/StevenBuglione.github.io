@@ -39,18 +39,20 @@ jobs:
         id: pages
         uses: actions/configure-pages@v4
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install Node Dependencies
+        uses: actions/setup-node@v4
+        run: npm i && npm run build
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.2
           bundler-cache: true
-
-
-      - name: Install Node Dependencies
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-        run: npm i && npm run build
 
       - name: Build site
         run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
