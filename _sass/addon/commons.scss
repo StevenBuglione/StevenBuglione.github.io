@@ -770,6 +770,13 @@ $btn-mb: 0.5rem;
     }
   }
 
+  #site-title-text{
+    //Font Family Leckerli One, Font Variation Regular 400 Normal
+    font-family: "Leckerli One", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
   .site-subtitle {
     font-size: 95%;
     color: var(--site-subtitle-color);
