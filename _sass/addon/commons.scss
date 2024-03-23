@@ -1108,8 +1108,9 @@ search {
 #topbar-title {
   display: none;
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 400;
   font-family: "Leckerli One", cursive;
+  font-style: normal;
   color: var(--topbar-text-color);
   text-align: center;
   width: 70%;
@@ -1364,6 +1365,7 @@ search {
 
   h1.dynamic-title {
     display: none;
+    font-weight: 400;
 
     ~ .content {
       margin-top: 2.5rem;
